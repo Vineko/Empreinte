@@ -2,7 +2,7 @@
 
 A simple theme for [Empreinte digital](http://empreinte-digital.fr/).
 
-To download, visit the [releases](https://github.com/zebrilee/empreinte-digital) page.
+To download, visit the [releases](https://github.com/zebrilee/empreinte) page.
 
 ## Copyright & License
 

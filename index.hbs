@@ -1,0 +1,20 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+{{!-- header --}}
+<header class="main-header">
+    <nav class="main-nav">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{navigation}}
+    </nav>
+</header>
+{{!-- The main content area on the homepage --}}
+<main id="content" class="content" role="main">
+
+{{!-- First static post --}}
+<div class="static-post {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <a class="about" href="/About"></a>
+</div>
+    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+    {{> "loop"}}
+    {{> "main-footer"}}
+</main>

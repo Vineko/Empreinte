@@ -1,8 +1,82 @@
-.site-wrapper{ background-color: #F5F5F5; }
-.main-header{background-color: #E0E0E0;}
-.nav-wrapper{background-color: #BDBDBD;}
-.nav li{ display: inline; }
-.content{background-color: #9E9E9E;}
-.main-footer{background-color: #424242;}
-.site-footer{background-color: #757575;}
-.static-post{height:900px;}
+/* ======== BASES ======== */
+
+body {
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Carme', Verdana, sans-serif;
+    font-size: 1em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* ======== COMMUNS ======== */
+
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1600px;
+    max-height: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.hidden-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin:0;
+    line-height:0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+/* ======== HEADER ======== */
+
+header #search {
+	height: 80px;
+	color: #A0CBF2;
+	background-color: #10255A;
+	padding-top: 12px;
+}
+
+header #search #direct-access {
+	float: left;
+}
+
+header #search #direct-access a {
+	color: #A0CBF2;
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+header #search form {
+	float: right;
+}
+
+header #main-nav #logo {
+	float: left;
+}
+
+header #main-nav li {
+	display: inline-block;
+}

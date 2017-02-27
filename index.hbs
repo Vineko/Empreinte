@@ -4,13 +4,17 @@
 <header class="container">
     <div id="search">
         <div id="direct-access">
-            <p>Accès direct: <a href="#tag">Étiquettes</a> <a href="#main">Contenu</a></p>
+            <p>Accès direct: </p>
+            <ul>
+                <li><a href="#tag">Étiquettes</a></li>
+                <li><a href="#main">Contenu</a></li>
+            </ul>
         </div>
         <form action="">
             <input type="text" name="" id="">
             <input type="submit" value="Chercher">
         </form>
-        </div>
+    </div>
     <nav id="main-nav" class="clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
         {{navigation}}

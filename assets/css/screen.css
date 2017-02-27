@@ -2,8 +2,7 @@
 
 body {
     margin: 0;
-    padding: 0 20px;
-    font-family: 'Carme', Verdana, sans-serif;
+    padding: 0;
     font-size: 1em;
 }
 
@@ -11,6 +10,15 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+ul li {
+	display: inline-block;
+}
+
+@font-face {
+	font-family: "Cagliostro";
+	src: url('../fonts/Cagliostro-Regular.ttf');
 }
 
 /* ======== COMMUNS ======== */
@@ -21,7 +29,7 @@ ul {
 
 .container{
     max-width: 1600px;
-    max-height: 800px;
+    /*max-height: 800px;*/
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -53,24 +61,62 @@ a:visited {
 /* ======== HEADER ======== */
 
 header #search {
-	height: 80px;
+	height: 100px;
+	margin-bottom: 20px;
 	color: #A0CBF2;
 	background-color: #10255A;
-	padding-top: 12px;
 }
 
 header #search #direct-access {
-	float: left;
+	/*float: left;*/
+	width: 280px;
+	margin: auto;
 }
 
-header #search #direct-access a {
+header #search #direct-access p {
+	display: inline-block;
+}
+
+header #search #direct-access ul {
+	display: inline-block;
+}
+
+header #search #direct-access a:link, header #search #direct-access a:visited {
 	color: #A0CBF2;
 	text-decoration: underline;
 	margin-left: 10px;
 }
 
+header #search #direct-access a:hover, header #search #direct-access a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
 header #search form {
+	/*float: right;*/
+	width: 280px;
+	margin: auto;
+}
+
+header #search form input[type="text"] {
+    outline: none;
+    border: none;
+    height: 30px;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #10255A;
+}
+
+header #search form input[type="submit"] {
 	float: right;
+	cursor: pointer;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+}
+
+header #search form input[type="submit"]:hover {
+	background-color: #A0CBF2;
 }
 
 header #main-nav #logo {

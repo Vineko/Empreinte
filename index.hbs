@@ -25,7 +25,12 @@
 
 {{!-- First static post --}}
 <div class="static-post {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-
+    <h1>Empreinte Digital</h1>
+    <div id="accroche">
+        <p>L'empreinte laissée dans le monde digital n'est pas toujours celle que nous croyons.</p>
+        <p>Cet univers regorge de codes, repères ou pièges pas toujours faciles à interpréter ou éviter.</p>
+        <p>L'important est donc de comprendre, d'apprendre et de partager ce savoir à votre tour.</p>
+    </div>
 </div>
     {{!-- The tag below includes the post loop - partials/loop.hbs --}}
     {{> "loop"}}

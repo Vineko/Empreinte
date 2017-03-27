@@ -6,7 +6,7 @@
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
 {{#unless featured}}
-<article class="{{post_class}}">
+<article class="{{post_class}} {{#if image}}" style="background: url({{image}}){{else}}no-cover{{/if}}; background-size: cover;">
     <header class="post-header">
         {{tags}}
     </header>

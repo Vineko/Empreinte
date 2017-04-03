@@ -1,57 +1,74 @@
-<div class="main-footer">
-  <div id="tag">
-    <h3>Étiquettes</h3>
-    <div class="row">
-      <ul>
-        <li><a href="{{@blog.url}}/tag/arduino" class="etiquette">1</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">2</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">3</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">4</a></li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul>
-        <li><a href="{{@blog.url}}" class="etiquette">1</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">2</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">3</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">4</a></li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul>
-        <li><a href="{{@blog.url}}" class="etiquette">1</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">2</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">3</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">4</a></li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul>
-        <li><a href="{{@blog.url}}" class="etiquette">1</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">2</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">3</a></li>
-        <li><a href="{{@blog.url}}" class="etiquette">4</a></li>
-      </ul>
-    </div>
-  </div>
-  <div id="contact">
-    <h3>Nous suivre</h3>
-      <div id="zebrilee">
-        <h4>Zebrilee</h4>
-        <a href="#">Twitter</a>
-        <a href="#">Github</a>
+  <div class="main-footer">
+    <div id="tag">
+      <h3>Étiquettes</h3>
+      <div class="row">
+        <ul>
+          {{#get "tags" filter= "name:'Réseaux sociaux',name:Conseils,name:Sécurité, name:Cybercriminalité"}}
+            {{#foreach tags}}
+              <li>
+                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+              </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
       </div>
-      <div id="vineko">
-        <h4>Vineko</h4>
-        <a href="#">Twitter</a>
-        <a href="#">Github</a>
-        <a href="mailto:#">Mail</a>
+      <div class="row">
+        <ul>
+          {{#get "tags" filter= "name:'Équilibre digital',name:Déconnexion,name:Entraide, name:Partage"}}
+            {{#foreach tags}}
+              <li>
+                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+              </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
       </div>
+      <div class="row">
+        <ul>
+          {{#get "tags" filter= "name:Docker,name:Accessibilité,name:UX, name:SEO"}}
+            {{#foreach tags}}
+              <li>
+                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+              </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+      <div class="row">
+        <ul>
+          {{#get "tags" filter= "name:Bot,name:Iot,name:Arduino, name:'Raspberry Pi'"}}
+            {{#foreach tags}}
+              <li>
+                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a></li>
+             {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+    </div>
+    <div id="contact">
+      <h3>Nous suivre</h3>
+        <div id="zebrilee">
+          <h4>Zebrilee</h4>
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+        </div>
+        <div id="vineko">
+          <h4>Vineko</h4>
+          <a href="#">Twitter</a>
+          <a href="#">Github</a>
+          <a href="mailto:#">Mail</a>
+        </div>
+    </div>
+    <div id="difficulte">
+      <h3>Difficulté</h3>
+      <ul>
+        {{#get "tags" filter= "name:Facile,name:Moyen,name:Difficile"}}
+          {{#foreach tags}}
+            <li>
+              <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}" style="background: url({{image}}) no-repeat;">= {{name}}</a>
+            </li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+    </div>
   </div>
-  <div id="difficulte">
-    <h3>Difficulté</h3>
-    <li>= facile</li>
-    <li>= moyen</li>
-    <li>= difficile</li>
-  </div>
-</div>

@@ -1,25 +1,7 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 {{!-- header --}}
-<header class="container">
-    <div id="search">
-        <div id="direct-access">
-            <p>Accès direct: </p>
-            <ul>
-                <li><a href="#tag">Étiquettes</a></li>
-                <li><a href="#main">Contenu</a></li>
-            </ul>
-        </div>
-        <form action="">
-            <input type="text" name="" id="">
-            <input type="submit" value="Chercher">
-        </form>
-    </div>
-    <nav id="main-nav" class="clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{navigation}}
-    </nav>
-</header>
+{{> "header"}}
 {{!-- The main content area on the homepage --}}
 <main id="main" class="container" role="main">
 

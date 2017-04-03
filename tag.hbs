@@ -2,26 +2,7 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{!-- If we have a tag cover, display that - else blog cover - else nothing --}}
-<header class="main-header post-head ">
-    <nav class="main-nav overlay clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{navigation}}
-    </nav>
-    <div class="vertical">
-        {{#tag}}
-        <div class="main-header-content">
-            <h1 class="page-title">{{name}}</h1>
-            <h2 class="page-description">
-                {{#if description}}
-                    {{description}}
-                {{else}}
-                    {{../pagination.total}} articles
-                {{/if}}
-            </h2>
-        </div>
-        {{/tag}}
-    </div>
-</header>
+{{> "header"}}
 
 {{!-- The main content area on the homepage --}}
 <main class="content" role="main">

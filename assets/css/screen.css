@@ -254,8 +254,6 @@ header #main-nav li {
 
 main#main .static-post {
     padding: 20px 8.44%;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
     color: #fff;
     margin-bottom: 20px;
     max-height: 800px;
@@ -263,15 +261,19 @@ main#main .static-post {
 }
 
 main#main .static-post h1{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family: "CaviarDreams";
 }
 
-main#main article.post {
+#accroche {
+    margin-bottom: 50px;
+}
+
+article.post {
     padding: 20px 8.44%;
 }
 
-main#main article {
+article {
     color: #fff;
     max-height: 800px;
     margin-bottom: 20px;
@@ -311,7 +313,7 @@ main#main article footer p {
     margin-top: 40px;
 }
 
-main#main article footer p a {
+.read-more {
     display: inline-block;
     width: 100px;
     text-align: center;
@@ -320,18 +322,44 @@ main#main article footer p a {
     padding: 5px;
 }
 
-main#main article footer p a:hover {
+.read-more:hover {
     background-color: #A0CBF2;
     border: 2px solid transparent;
     color: #10255A;
-    transition: all .5S;
+    transition: all .5s;
 }
 
+#tag h3 {
+    font-size: 1.8em;
+    padding-left: 60px;
+    color: #10255A;
+    display: inline-block;
+    background: url(../css/images/picto-etiquettes.png) no-repeat 20px center;
+}
 
+#tag ul {
+    padding-left: 20px;
+}
 
+#tag li {
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+}
 
+.tag {
+    background-color: #fff;
+    color: #10255A;
+    padding: 5px;
+    border: 2px solid #10255A;
+    transition: all .5s;
+}
 
-
+.tag:hover {
+    background-color: #10255A;
+    color: #fff;
+    transition: all .5s;
+}
 
 
 
